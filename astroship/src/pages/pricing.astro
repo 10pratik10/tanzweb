@@ -1,0 +1,75 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Pricing from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Web Development",
+    price: "14000 Onwards",
+    popular: false,
+    features: [
+      "Easy to Customise",
+      "Multiple User Access",
+      "Free Domain",
+      "Secured Website",
+      "Advanced UI/UX",
+      "Extended Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Digital Marketing",
+    price: "10000/P.M Onwards",
+    popular: true,
+    features: [
+      "Social Media Management",
+      "Content Creation",
+      "Lead Generation",
+      "Brand Collaborators",
+      "Public Relation",
+      "Priority Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Enterprise",
+    price: "30000/P.M Onwards",
+    popular: false,
+    features: [
+      "Digital Marketing",
+      "Website Development",
+      "Website Management",
+      "Multi Level Marketing",
+      "Dedicated Account Manager",
+      "24/7 Phone Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="desc"
+        >Simple & Predictable pricing. No Surprises.</Fragment
+      >
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </Container>
+</Layout>

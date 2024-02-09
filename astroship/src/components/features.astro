@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Website Development",
+    description:
+      "Build your business website on demand, we create customized customized website based on research.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Social Media Marketing",
+    description:
+      "Keep Social Media Account Upto Date is important factor for business as trends are seeing on Social Medias.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Lead Generation",
+    description:
+      "By collaborating with brands like Carwale, 99acres, Bookmyshow will help your business to get more leads.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Brand Uplifting",
+    description:
+      "With our enterprise package you can lift your brand into the next stage, we are here to help you.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "SEO Enabled",
+    description:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Community",
+    description:
+      "We have large number of developers and marketer community, this enables to easy access for any business.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to upgrade a Business
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Tanz Corp follows with the lastest trend in development in Digital Marketing and Website Development to Business up to Date.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
